@@ -5,7 +5,7 @@
 'use strict';
 
 ekinApp.controller('login',
-    function login($scope) {
+    function login($scope,$location) {
         var i,j;
 
         $scope.allusers = {
@@ -56,71 +56,71 @@ ekinApp.controller('login',
 
                 if($scope.allusers.users[1].weight=== "")
                 {
-                     window.location="/weight.html";
+                     $location.path("/weight");
                 }
                 else if($scope.allusers.users[1].height=== ""){
-                    window.location="/height.html";
+                    $location.path("/height");
                 }
                 else if($scope.allusers.users[1].age=== ""){
-                    window.location="/age.html";
+                    $location.path("/age");
                 }
                 else if($scope.allusers.users[1].smoking===""){
-                    window.location="/smoking.html";
+                    $location.path("/smoking");
                 }
                 else{
-                    window.location="/userdata.html";
+                    $location.path("/userdata");
                 }
 
-                }}
+                }};
 
         $scope.cancle=function(){
-            window.location="/userdata.html";
+            $location.path("/Login");
         };
         $scope.w_submit=function(uweight){
             //$scope.allusers.users[1].weight=uweight.userweight;
             //window.alert($scope.allusers.users[1].weight);
 
              if($scope.allusers.users[1].height=== ""){
-                window.location="/height.html";
+                 $location.path("/height");
             }
             else if($scope.allusers.users[1].age=== ""){
-                window.location="/age.html";
+                 $location.path("/age");
             }
              else if($scope.allusers.users[1].smoking===""){
-                 window.location="/smoking.html";
+                 $location.path("/smoking");
              }
             else{
-                window.location="/userdata.html";
+                 $location.path("/userdata");
             }
         };
         $scope.h_submit=function(uheight){
             //$scope.allusers.users[1].weight=uweight.userweight;
             //window.alert($scope.allusers.users[1].height);
             if($scope.allusers.users[1].age=== ""){
-                window.location="/age.html";
+                $location.path("/age");
             }
             else if($scope.allusers.users[1].smoking===""){
-                window.location="/smoking.html";
+                $location.path("/smoking");
             }
             else{
-                window.location="/userdata.html";
+                $location.path("/userdata");
             }
         };
         $scope.a_submit=function(uage){
             //$scope.allusers.users[1].weight=uweight.userweight;
             //window.alert($scope.allusers.users[1].smoking);
-            window.location="/userdata.html";
+            //window.location="/userdata";
             if($scope.allusers.users[1].smoking===""){
-                window.location="/smoking.html";
+                $location.path("/smoking");
             }
             else{
-                window.location="/userdata.html";
+                $location.path("/userdata");
             }
         };
         $scope.s_submit=function(usmoking){
             //$scope.allusers.users[1].weight=uweight.userweight;
             window.alert(usmoking.answer);
-            window.location="/userdata.html";
+            $location.path("/userdata");
         };
 
     }

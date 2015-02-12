@@ -1,6 +1,7 @@
 /**
  * Created by dchandana on 2/10/2015.
- */
+ *//*
+
 'use strict';
 
 ekinApp.controller('userRegister',
@@ -22,3 +23,4 @@ ekinApp.controller('userRegister',
 
     }
 );
+*/

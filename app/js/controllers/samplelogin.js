@@ -1,9 +1,12 @@
 /**
  * Created by dchandana on 2/11/2015.
- */
+ *//*
+
+*/
 /**
  * Created by dchandana on 2/11/2015.
- */
+ *//*
+
 
 'use strict';
 
@@ -128,3 +131,4 @@ ekinApp.controller('samplelogin',
 
     }
 );
+*/
